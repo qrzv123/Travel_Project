@@ -30,6 +30,8 @@ public class TravelPhoneAuthController {
 		int rannum = (int)(Math.random() * 900000) + 100000;
 		String rannum2 = String.valueOf(rannum);
 		
+		System.out.println("key : " + rannum2);
+		
 		redisAuth.setKeyValue(phone, rannum2, 300);
 		
 		Message coolsms = new Message(api_key, api_secret);
